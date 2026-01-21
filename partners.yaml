@@ -1,0 +1,36 @@
+partners:
+  acme_health:
+    partner_code: ACME
+    file_name: acme.txt
+    delimiter: "|"
+    has_header: true
+    id_field: MBI
+    column_mapping:
+      MBI: external_id
+      FNAME: first_name
+      LNAME: last_name
+      DOB: dob
+      EMAIL: email
+      PHONE: phone
+    date_parse:
+      format: "%m/%d/%Y"
+    phone_parse:
+      digits_expected: 10
+
+  better_care:
+    partner_code: BETTERCARE
+    file_name: bettercare.csv
+    delimiter: ","
+    has_header: true
+    id_field: subscriber_id
+    column_mapping:
+      subscriber_id: external_id
+      first_name: first_name
+      last_name: last_name
+      date_of_birth: dob
+      email: email
+      phone: phone
+    date_parse:
+      format: "%Y-%m-%d"
+    phone_parse:
+      digits_expected: 10
